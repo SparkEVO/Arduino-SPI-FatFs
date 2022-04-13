@@ -1,5 +1,5 @@
 #include "src/ff.h"
-#include "src/Adafruit_SPIFlash/src/Adafruit_SPIFlash.h"
+#include "src/SAMD_SPIFlash/src/Adafruit_SPIFlash.h"
 
 #define Serial SerialUSB
 
