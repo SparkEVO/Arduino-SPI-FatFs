@@ -1,0 +1,3 @@
+[submodule "src/SAMD_SPIFlash"]
+	path = src/SAMD_SPIFlash
+	url = git@github.com:SparkEVO/SAMD_SPIFlash.git
