@@ -27,7 +27,11 @@ void setup() {
 #ifdef ERASE_MEMORY
   Serial.println(F("Erasing memory..."));
   flashTransport.setClockSpeed(MAX_FREQ, MAX_FREQ);
-  flash.begin();
+  if(!flash.begin())
+  {
+    Serial.println(F("Flash begin error."));
+    return;
+  }
   
   flash.eraseChip();
   flash.waitUntilReady();

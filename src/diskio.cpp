@@ -46,8 +46,8 @@ DSTATUS disk_initialize (
 )
 {
   _flashTransport.setClockSpeed(MAX_FREQ, MAX_FREQ);
-  _flash.begin();
-  return RES_OK;
+  if (_flash.begin()) return RES_OK;
+  else return RES_ERROR;
 }
 
 
