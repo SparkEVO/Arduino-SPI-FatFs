@@ -103,7 +103,6 @@ DRESULT disk_ioctl (
 {
   DRESULT res = RES_ERROR;  
   
-  uint8_t id[5];
   switch( cmd )
   {
     case CTRL_SYNC :   // Make sure that data has been written  
