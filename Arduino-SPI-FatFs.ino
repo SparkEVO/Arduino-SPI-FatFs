@@ -113,7 +113,8 @@ void setup() {
     while(c < 5)
     {
       unsigned long t = millis();
-      wres = f_puts(str, &wtestfile);
+      unsigned int wr = 0;
+      wres = f_write(&wtestfile, str, strlen(str), &wr);
       f_sync(&wtestfile);
       means[l-1] += (millis() - t);
       if (wres < 0) {
