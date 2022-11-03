@@ -107,7 +107,6 @@ DRESULT disk_ioctl (
   {
     case CTRL_SYNC :   // Make sure that data has been written  
       _flash.syncBlocks();
-      _flash.waitUntilReady();
       res = RES_OK;
       break;
     
